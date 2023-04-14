@@ -25,6 +25,8 @@ M.disabled = {
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
+    ["n"] = { "nzz", "center search" },
+    ["N"] = { "Nzz", "center search" },
   },
 }
 

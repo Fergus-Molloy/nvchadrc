@@ -32,6 +32,7 @@ local plugins = {
     opts = overrides.treesitter,
     dependencies = {
       "nvim-treesitter/nvim-treesitter-textobjects",
+      "windwp/nvim-ts-autotag",
     },
   },
 
@@ -61,39 +62,19 @@ local plugins = {
 
   {
     "glepnir/lspsaga.nvim",
-    opt = true,
+    opts = overrides.lspsaga,
     branch = "main",
     event = "LspAttach",
-    config = function()
-      require("lspsaga").setup {
-        finder = {
-          max_height = 0.5,
-          min_width = 30,
-          force_max_height = false,
-          keys = {
-            jump_to = "p",
-            expand_or_jump = "o",
-            vsplit = "<c-c>v",
-            split = "<c-c>i",
-            tabe = "<c-c>t",
-            tabnew = "r",
-            quit = { "q", "<ESC>" },
-            close_in_preview = "<ESC>",
-          },
-        },
-      }
-    end,
-    requires = {
-      { "nvim-tree/nvim-web-devicons" },
-      -- Please make sure you install markdown and markdown_inline parser
-      { "nvim-treesitter/nvim-treesitter" },
-    },
   },
 
   {
     "tpope/vim-surround",
     event = "BufEnter",
   },
+  --{
+  --  "folke/todo-comments.nvim",
+  --  event = "BufEnter",
+  --},
 
   -- To make a plugin not be loaded
   -- {

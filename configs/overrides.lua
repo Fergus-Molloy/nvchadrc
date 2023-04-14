@@ -11,6 +11,8 @@ M.treesitter = {
     "vue",
     "rust",
     "nix",
+    "markdown",
+    "markdown_inline",
   },
   indent = { enable = true },
   highlight = { enable = true },

@@ -37,10 +37,36 @@ M.fugitive = {
 M.lspconfig = {
   n = {
     ["<leader>rn"] = {
-      function()
-        require("nvchad_ui.renamer").open()
-      end,
-      "lsp rename",
+      "<cmd>Lspsaga rename<cr>",
+      "lsp saga rename",
+    },
+    ["<leader>ca"] = {
+      "<cmd>Lspsaga code action<cr>",
+      "lsp saga code action",
+    },
+    ["<leader>do"] = {
+      "<cmd>Lspsaga show_line_diagnostics<cr>",
+      "lsp saga floating diagnostic",
+    },
+    ["<leader>ho"] = {
+      "<cmd>Lspsaga lsp_finder<cr>",
+      "lsp saga hover menu",
+    },
+    ["<leader>pd"] = {
+      "<cmd>Lspsaga peek_definition<cr>",
+      "lsp saga peek definition",
+    },
+    ["<leader>gd"] = {
+      "<cmd>Lspsaga goto_definition<cr>",
+      "lsp saga peek definition",
+    },
+    ["K"] = {
+      "<cmd>Lspsaga hover_doc<cr>",
+      "lsp saga open hover docs",
+    },
+    ["KK"] = {
+      "<cmd>Lspsaga hover_doc ++keep<cr>",
+      "lsp saga pin hover docs",
     },
   },
 }

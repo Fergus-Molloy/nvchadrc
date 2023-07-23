@@ -18,6 +18,9 @@ local sources = {
   b.formatting.rustfmt.with {
     extra_args = { "--edition=2021" },
   },
+
+  --nix
+  b.formatting.nixpkgs_fmt,
 }
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})

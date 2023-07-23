@@ -19,3 +19,5 @@ vim.opt.joinspaces = false
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.guifont = "Fira Code:h16"
+-- do not use system clipboard by default
+vim.opt.clipboard = ""
